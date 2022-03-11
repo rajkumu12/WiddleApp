@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contacts"
+            type="String" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/tvheading"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:gravity="center"
+                android:text="@string/add_contact"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@+id/tvheading"
+                android:layout_marginHorizontal="@dimen/dp12"
+                android:layout_marginTop="24dp"
+                android:background="@color/etbg"
+                android:hint="@string/enter_name"
+                android:paddingHorizontal="@dimen/sp18" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@+id/et_name"
+                android:layout_marginHorizontal="@dimen/dp12"
+                android:layout_marginTop="@dimen/sp24"
+                android:background="@color/etbg"
+                android:hint="@string/enter_mobile_number"
+                android:paddingHorizontal="@dimen/sp18" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_phone"
+                android:layout_marginHorizontal="@dimen/dp12"
+                android:layout_marginTop="@dimen/sp24"
+                android:background="@color/etbg"
+                android:hint="@string/description"
+                android:minHeight="100dp"
+                android:paddingHorizontal="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/tvbtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:layout_below="@+id/et_desc"
+                android:layout_marginHorizontal="@dimen/sp24"
+                android:layout_marginTop="@dimen/sp24"
+                android:background="@color/purple_700"
+                android:gravity="center"
+                android:text="@string/add_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvbtn"
+                android:layout_marginHorizontal="@dimen/sp24"
+                android:layout_marginTop="@dimen/sp24"
+                android:padding="32dp"
+                android:text="@{contacts}"
+                android:textSize="@dimen/sp18" />
+        </RelativeLayout>
+    </ScrollView>
+</layout>
